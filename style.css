@@ -76,6 +76,11 @@ h1 { margin: 0; font-size: 20px; }
 #list .name { font-weight: 600; }
 #list .meta { font-size: 12px; color: var(--muted); }
 
+#unmapped { border-top: 1px solid var(--border); padding: 10px 16px; font-size: 13px; }
+#unmapped summary { cursor: pointer; color: var(--muted); }
+#unmapped ul { margin: 8px 0 0; padding-left: 18px; }
+#unmapped li { margin: 4px 0; }
+
 #map { flex: 1; height: 100%; }
 
 .popup { width: 240px; }

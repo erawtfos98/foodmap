@@ -120,6 +120,14 @@
     document.body.classList.toggle('list-open');
   });
 
+  var unmappedEl = document.querySelector('#unmapped ul');
+  (window.UNMAPPED || []).forEach(function (v) {
+    var li = document.createElement('li');
+    li.innerHTML = '<a href="' + shortUrl(v.id) + '" target="_blank" rel="noopener">' + esc(v.title) + '</a>';
+    unmappedEl.appendChild(li);
+  });
+  if (!unmappedEl.children.length) document.getElementById('unmapped').hidden = true;
+
   // Start on Auckland, where most recommendations are.
   map.setView([-36.87, 174.76], 12);
   render(false);
