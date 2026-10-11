@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foodies Table Map</title>
+  <meta name="description" content="Interactive map of the food spots recommended in the Vanessa &amp; Anthony YouTube Shorts.">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.css">
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <header>
+      <h1>Foodies Table Map</h1>
+      <p class="sub">Food spots from the
+        <a href="https://www.youtube.com/@VanessaandAnthony/shorts" target="_blank" rel="noopener">Vanessa &amp; Anthony</a>
+        YouTube Shorts</p>
+      <input id="search" type="search" placeholder="Search place, dish, suburb…" autocomplete="off">
+      <div id="chips" role="group" aria-label="Filter by cuisine"></div>
+      <p id="count"></p>
+    </header>
+    <ul id="list"></ul>
+  </aside>
+  <main id="map" aria-label="Map"></main>
+  <button id="toggle" aria-label="Show list">☰ List</button>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/markercluster/leaflet.markercluster.js"></script>
+  <script src="data/places.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
